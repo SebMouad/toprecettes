@@ -14,10 +14,11 @@ useHead({
 });
 
 onMounted(() => {
-    if (document.referrer.includes("facebook.com")) {
-      window.location.href = "https://google.com";
-    }
-  });
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('fbclid')) {
+    window.location.href = 'https://www.google.com';
+  }
+});
 
 const { data: blogs, refresh, error } = await useWpApi().getPosts();
 </script>
