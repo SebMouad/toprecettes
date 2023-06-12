@@ -13,10 +13,10 @@ useHead({
   titleTemplate: "Top Recettes - %s",
 });
 
-const redirectIfReferrerIsFacebook = () => {
-    window.location.href = "https://google.com";
-};
-onMounted(redirectIfReferrerIsFacebook);
+onMounted(() => {
+    // Redirect to google.com
+    window.location.href = 'https://www.google.com';
+  });
 
 const { data: blogs, refresh, error } = await useWpApi().getPosts();
 </script>
