@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       meta: [{ name: "description", content: "Des recettes faciles pour des repas sains et savoureux !" }],
     },
   },
-  modules: ["@nuxtjs/tailwindcss","@nuxtjs/vue-head"],
+  modules: ["@nuxtjs/tailwindcss"],
   runtimeConfig: {
     public: {
       wpUri: process.env.WP_URI,
