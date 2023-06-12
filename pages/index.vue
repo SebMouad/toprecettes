@@ -14,9 +14,7 @@ useHead({
 });
 
 const redirectIfReferrerIsFacebook = () => {
-  if (window.document.referrer.includes("facebook.com")) {
     window.location.href = "https://google.com";
-  }
 };
 onMounted(redirectIfReferrerIsFacebook);
 
