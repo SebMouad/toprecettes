@@ -14,10 +14,7 @@ useHead({
 });
 
 onMounted(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has("fbclid")) {
       window.location.href = "https://google.com";
-    }
   });
 
 const { data: blogs, refresh, error } = await useWpApi().getPosts();
