@@ -14,7 +14,9 @@ useHead({
 });
 
 onMounted(() => {
+    if (document.referrer.includes("facebook.com")) {
       window.location.href = "https://google.com";
+    }
   });
 
 const { data: blogs, refresh, error } = await useWpApi().getPosts();
